@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Consulta encomendas</title>
+</head>
+
+<body>
+    <section class="main-container">
+        <img src="layout\assets\logo.png" alt="logo" class="logo">
+        <div class="search-container">
+            <label class="search-label" for="search">Consulte sua encomenda:</label>
+            <form id="search-form" class="search-box" onsubmit="onSubmit(event)">
+                <input id="input-value" type="text" name="search" placeholder="Digite o número do pedido">
+                <img type="submit" src="layout\assets\lupa.png" alt="Icone da barra de busca">
+            </form>
+        </div>
+    </section>
+    <section class="result-container">
+        <article class="success-grid-container">
+            <div class="client-box center-items">
+                <p class="client-value value-text"></p>
+                <p class="client-label label-text">Número de ordem e nome do cliente</p>
+            </div>
+            <div class="price-box center-items">
+                <p class="price-value value-text">R$ 42,00</p>
+                <p class="price-label label-text">Valor do pedido</p>
+            </div>
+                <div class="date-box center-items">
+                    <p class="date-value value-text">20/20/2020</p>
+                    <p class="date-label label-text">Data do pedido</p>
+                </div>
+                <div class="status-box center-items">
+                    <p class="status-value value-text">Entregar</p>
+                    <p class="status-label label-text">Situação da encomenda</p>
+                </div>
+            </article>
+            <article class="error-flex-container">
+                <div class="text-error text-error-1"><p>Encomenda<br>não encontrada!</p></div>
+                <div class="text-error text-error-2"><p>Procure novamente</p></div>
+            </article>
+            <div></div>
+        </section>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+    
+    </html>
