@@ -115,26 +115,26 @@ input:focus {
 }
 
 @media screen and (max-width: 1000px) {
-  .sucess--grid-container {
+  .success-grid-container {
     padding: 0 20%;
   }
 }
 @media screen and (max-width: 800px) {
-  .sucess--grid-container {
+  .success-grid-container {
     padding: 0 10%;
   }
 }
 @media screen and (max-width: 580px) {
-  .sucess--grid-container {
+  .success-grid-container {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-rows: min-content;
     padding: 0 10%;
   }
-  .sucess--grid-container .price-box {
+  .success-grid-container .price-box {
     display: none;
   }
-  .sucess--grid-container .status-box {
+  .success-grid-container .status-box {
     grid-row-start: 2;
     grid-row-end: 2;
   }
