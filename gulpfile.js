@@ -1,13 +1,13 @@
 const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
 const minifyCss = require('gulp-clean-css');
 const minifyJs = require('gulp-minify');
 const minifyHtml = require('gulp-htmlmin');
 
 gulp.task('minify-css', () => {
     return gulp.src('./app/styles/*.css')
-        .pipe(minifyCss({
-            compatibility: 'ie8'
-        }))
+        .pipe(autoprefixer())
+        .pipe(minifyCss())
         .pipe(gulp.dest('./build/styles'))
 });
 
@@ -36,12 +36,12 @@ gulp.task('minify-js', () => {
 
 gulp.task('copy-assets', () => {
     return gulp.src('./app/assets')
-    .pipe(gulp.dest('./build/assets'))
+        .pipe(gulp.dest('./build/assets'))
 })
 
 gulp.task('copy-dados', () => {
     return gulp.src('./app/dados.json')
-    .pipe(gulp.dest('./build'))
+        .pipe(gulp.dest('./build'))
 })
 
 gulp.task('build', gulp.series('minify-html', 'minify-css', 'minify-js', 'copy-assets', 'copy-dados'));

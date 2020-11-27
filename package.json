@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-dependences": "npm install gulp http-server gulp-clean-css gulp-htmlmin gulp-minify concurrently --save-dev",
+    "install-dependences": "npm install gulp http-server gulp-clean-css gulp-htmlmin gulp-minify concurrently --save-dev gulp-autoprefixer",
     "view": "npx http-server ./app -c-1 -o -a localhost",
     "dev": "concurrently \"sass --watch ./app/scss/style.scss ./app/styles/style.css\" \"npm run view\"",
     "build": "npx gulp build"
