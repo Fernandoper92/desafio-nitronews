@@ -7,6 +7,7 @@ Para isso, instale as seguintes dependências:
 
 Após instalar o NodeJS, vá até a pasta raiz da aplicação pelo terminal e execute o seguinte comando:
 * npm run install-dependences
+
 Isto irá instalar todas as dependências necessárias para executar a aplicação e realizar o build.
 
 # Desenvolvimento /  Visualização
