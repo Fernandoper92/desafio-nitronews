@@ -19,5 +19,6 @@ Para executar a aplicação em modo visualização, basta executar o seguinte co
 # Produção
 Para executar a aplicação em modo visualização, basta executar o seguinte comando pelo terminar na pasta raiz da aplicação:
 * npm run build
+
 Os arquivos gerados pelo build estarão na pasta "build" dentro da pasta raiz da aplicação.
 Todos os arquivos CSS e Javascript estarão minificados, e os comentários dos arquivos HTML serão removidos.

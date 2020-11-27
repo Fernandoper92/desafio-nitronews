@@ -14,6 +14,7 @@ gulp.task('minify-css', () => {
 gulp.task('minify-html', () => {
     return gulp.src('./app/**/*.html')
         .pipe(minifyHtml({
+            collapseWhitespace: true,
             removeComments: true,
             minifyJS: true,
             minifyCSS: true,
