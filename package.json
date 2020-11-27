@@ -1,0 +1,32 @@
+{
+  "name": "desafio-nitronews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-dependences": "npm install gulp http-server gulp-clean-css gulp-htmlmin gulp-minify concurrently --save-dev",
+    "view": "npx http-server ./app -c-1 -o -a localhost",
+    "dev": "concurrently \"sass --watch ./app/scss/style.scss ./app/styles/style.css\" \"npm run view\"",
+    "build": "npx gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fernandoper92/desafio-nitronews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fernandoper92/desafio-nitronews/issues"
+  },
+  "homepage": "https://github.com/Fernandoper92/desafio-nitronews#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify": "^3.1.0",
+    "http-server": "^0.12.3"
+  }
+}

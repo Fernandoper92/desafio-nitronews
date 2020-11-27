@@ -2,7 +2,7 @@
 
 function readJson(value) {
 
-    fetch('./dados.json')
+    fetch('../../dados.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error("Não foi possivel ler o arquivo");
