@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const minifyCss = require('gulp-clean-css');
 const minifyJs = require('gulp-minify');
+const babel = require('gulp-babel');
 const minifyHtml = require('gulp-htmlmin');
 
 gulp.task('minify-css', () => {
@@ -25,6 +26,7 @@ gulp.task('minify-html', () => {
 
 gulp.task('minify-js', () => {
     return gulp.src('./app/scripts/*.js')
+        .pipe(babel({ presets: ['@babel/preset-env'] }))
         .pipe(minifyJs({
             noSource: true,
             ext: {

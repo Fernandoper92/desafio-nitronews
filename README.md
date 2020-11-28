@@ -6,7 +6,7 @@ Para isso, instale as seguintes dependências:
 * NodeJS versão LTS: https://nodejs.org/en/
 
 Após instalar o NodeJS, vá até a pasta raiz da aplicação pelo terminal e execute o seguinte comando:
-* npm run install-dependences
+* npm run install-dependencies
 
 Isto irá instalar todas as dependências necessárias para executar a aplicação e realizar o build.
 

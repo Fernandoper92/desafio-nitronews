@@ -1,7 +1,18 @@
 
+    function onSubmit(event) {
+        event.preventDefault();
+        let value = document.getElementById('input-value').value;
+    
+        if (value) {
+            value = value.toUpperCase();
+            readJson(value)
+        } else {
+            showError();
+        }
+    
+    }
 
 function readJson(value) {
-
     fetch('../dados.json')
         .then(response => {
             if (!response.ok) {
@@ -18,29 +29,12 @@ function readJson(value) {
         })
 }
 
-
-function onSubmit(event) {
-    event.preventDefault();
-    let value = document.getElementById('input-value').value;
-    value = value.toUpperCase();
-    checkValue(value);
-
-}
-
-function checkValue(value) {
-    if (value) {
-        readJson(value)
-    } else {
-        showError();
-    }
-}
-
 function compareData(result, value) {
-    const encomendas = result.encomendas;
-    for (i in encomendas) {
-        numero = encomendas[i].numero;
-        if (value == numero) {
-            return showData(encomendas[i]);
+    const orders = result.encomendas;
+    for (i in orders) {
+        number = orders[i].numero;
+        if (value == number) {
+            return showData(orders[i]);
         } else {
             showError();
         }
@@ -64,8 +58,8 @@ function showData(data) {
     document.querySelector('.price-value').innerHTML = price;
     document.querySelector('.date-value').innerHTML = date;
 
-    if (data.entregue) { const status = document.querySelector('.status-value').innerHTML = "Entregue" };
-    if (!data.entregue) { const status = document.querySelector('.status-value').innerHTML = "Entregar" };
+    if (data.entregue) { document.querySelector('.status-value').innerHTML = "Entregue" };
+    if (!data.entregue) { document.querySelector('.status-value').innerHTML = "Entregar" };
 
 }
 
